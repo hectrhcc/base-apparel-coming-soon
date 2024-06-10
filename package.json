@@ -1,0 +1,25 @@
+{
+  "name": "base-apparel-coming-soon",
+  "version": "1.0.0",
+  "description": "web",
+  "main": "\u001b[A\u001b[B\u001b[D\u001bhtml",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hectrhcc/base-apparel-coming-soon.git"
+  },
+  "keywords": [
+    "tailwind"
+  ],
+  "author": "hector contreras",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hectrhcc/base-apparel-coming-soon/issues"
+  },
+  "homepage": "https://github.com/hectrhcc/base-apparel-coming-soon#readme",
+  "devDependencies": {
+    "tailwindcss": "^3.4.4"
+  }
+}
