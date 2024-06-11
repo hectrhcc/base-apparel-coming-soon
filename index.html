@@ -4,35 +4,142 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;700&display=swap">
   <link rel="stylesheet" href="./output.css">
   <title>Frontend Mentor | Base Apparel coming soon page</title>
   <style>
     .attribution { font-size: 11px; text-align: center; margin-top:4rem; }
     .attribution a { color: hsl(228, 45%, 44%); }
+    .placeholder-Desaturated-Red::placeholder {
+  color: hsl(0, 38%, 85%);
+  font-weight:700;
+}
+     .espacio{
+      letter-spacing: 0.3em;
+      font-weight:900;
+      font-size:smaller;
+     }
+     .borde-circulo{
+      border: 0.2rem solid hsl(0, 48%, 76%) ;
+     }
+
+    .espaciado{
+      letter-spacing: 1rem;
+    }
+    .titulo{
+      display: block;
+      justify-content: center;
+      align-items: center;
+      font-size:2.6rem;
+      margin-top: 3.3rem;  
+      margin-bottom:1rem;
+      letter-spacing: 0.31em;
+      text-transform: uppercase;
+      text-align: center;
+      line-height:2.7rem;
+    }
+    .wear{
+      display: block;
+      font-weight: lighter;
+      letter-spacing: 0.36em;
+    }
+    .comming{
+      display:block;
+      font-weight:500;
+    }
+    .texto{
+      font-weight:700;
+      margin: 2rem auto;
+      text-align:center;
+      padding: 0 2rem;
+      font-size: smaller;
+      line-height:1.7rem;
+      color:hsl(0, 34%, 76%);
+    }
+
+    input:invalid::after {
+  content: "Por favor, ingrese un correo electrónico válido.";
+  color: red;
+  font-size: smaller;
+  position: absolute;
+  bottom: -20px; /* Ajusta la posición vertical del mensaje */
+  left: 0;
+    }
+
+    @media (min-width: 1440px) {
+      body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+  }
+
+
+      .container{
+        display: flex;
+        width: 100%;
+        min-width:92.2%;
+      }
+      .elem1{
+        display: inline;
+      }
+      .elem2{
+        display: inline;
+        
+      }
+      .attribution{
+        position: relative;
+        top:13rem;
+      }
+
+    .texto{
+      text-align:left;
+      padding: 0 1rem;
+    }
+    .titulo{
+      display: inline-block;
+      font-size:4.7rem;
+      margin-top: 3.3rem;  
+      width: 50%;
+      text-transform: uppercase;
+      text-align: left;
+      line-height:4.8rem;
+      position: relative;
+      left:13.8rem;
+    }
+    .sub{
+      position: relative;
+      left:12rem;
+    }
+    }
   </style>
 </head>
-
-<body class="font-Josefin">
+<!-- descargar la font e importarla no funko-->
+<body>
+  <div class="container ">
+    <div class="elem1 ">
   <header>
-    <div class="flex mb-8 mt-8 ml-8">  
-    <div class="mt-2 rounded-full h-4 w-4 border border-black relative inline mr-2 ">
+    
+    <div class="flex mb-8 mt-8 ml-8 sub">  
+    <div class="mt-2 rounded-full h-5 w-5 borde-circulo  relative inline mr-2 lg:mt-0 lg:h-7 lg:w-7 ">
       <div class="relative inset-0 rounded-full border border-transparent">
       </div>
       </div> 
-      <span class="w-1/6 text-left Soft-Red font-semibold tracking-widest inline leading-4">BASE APPAREL</span>
+      <span class="w-1/6 text-left font-semibold espacio inline leading-4 text-Dark-Grayish-Red lg:w-1/12">BASE APPAREL</span>
     </div>
-     
-    <img src="./images/hero-mobile.jpg"  />
+    
+    <img src="./images/hero-mobile.jpg"  class="lg:hidden sm:mx-auto max-md:w-full"  />
+    
+    
   </header>
   <main>
-  <h1 class="mx-auto text-center  text-6xl mb-6 mt-16 tracking-widest w-1/2 ">We're coming soon</h1>
+  <div  class="titulo"><div class="wear text-Desaturated-Red">We're</div><div class="comming text-Dark-Grayish-Red"> coming soon</div></div>
 
-  <p class="block text-center mb-10  mx-6">Hello fellow shoppers! We're currently building our new fashion store. 
+  <p class="texto block flex  items-center  sm:text-center max-md:text-center sm:w-3/4 lg:w-1/2 ">Hello fellow shoppers! We're currently building our new fashion store. 
   Add your email below to stay up-to-date with announcements and our launch deals.</p>
 
-  <div class="flex justify-center items-center"><input type="email" placeholder="Email Address" class=" flex p-3 rounded-xl  rounded-r-none bg-white border border-red-500 border-solid border-3" />
-  <button class="relative right-4"><img src="./images/icon-arrow.svg" class=" bg-black py-4 px-7 border-red-500 border-solid border-3 rounded-3xl "/></button></div>
-  
+  <div class="flex justify-center items-center"><input type="email" placeholder="Email Address" class=" w-8/12 flex p-3 rounded-3xl  rounded-r-none bg-white border border-Desaturated-Red border-solid border-3 placeholder-Desaturated-Red  bg-Gradient-Text-1 lg:w-5/12" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"/>
+  <button class="relative right-4  "  ><img src="./images/icon-arrow.svg" class="py-4 px-7 border-Soft-Red border-solid border-3 rounded-3xl bg-Gradient-Text-2 "  /></button>
+</div>
   </main>
   <footer>
     <p class="attribution">
@@ -40,5 +147,8 @@
       Coded by <a href="https://github.com/hectrhcc" target="_blank">Hector Contreras</a>.
     </p>
   </footer>
+</div>
+<div class="elem2"><img src="./images/hero-desktop.jpg"  class="sm:hidden max-md:hidden lg:block "  /></div>
+</div>
 </body>
 </html>
