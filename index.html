@@ -66,7 +66,60 @@
   left: 0;
     }
 
-    @media (min-width: 1000px) {
+    @media screen and (min-width: 1024px) and (max-width: 1439px) {
+      body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+  }
+
+
+      .container{
+        display: flex;
+        width: 100%;
+        min-width:92.2%;
+      }
+      .elem1{
+        display: inline;
+      }
+      .elem2{
+        display: inline;
+        
+      }
+      .attribution{
+        position: relative;
+        top:13rem;
+        left:42%;
+      }
+
+    .texto{
+      text-align:left;
+      padding: 0 1rem;
+    }
+        .titulo{
+          position: relative;
+          display: inline-block;
+      font-size:4.7rem;
+      margin-top: 3.3rem;  
+      width: 50%;
+      text-transform: uppercase;
+      text-align: left;
+      line-height:4.8rem;
+      position: relative;
+      left:12rem;
+        }
+        .sub{
+          position: relative;
+          left:10rem;
+        }
+
+        .input{
+          position: relative;
+          left:1.5rem;
+        }
+}
+
+    @media (min-width: 1440px) {
       body, html {
     margin: 0;
     padding: 0;
@@ -111,7 +164,15 @@
       position: relative;
       left:12rem;
     }
+    .input{
+      position: relative;
+      left:1rem;
     }
+    }
+
+   
+   
+
   </style>
 </head>
 <!-- descargar la font e importarla no funko-->
@@ -138,7 +199,7 @@
   <p class="texto block flex  items-center  sm:text-center max-md:text-center sm:w-3/4 lg:w-1/2 ">Hello fellow shoppers! We're currently building our new fashion store. 
   Add your email below to stay up-to-date with announcements and our launch deals.</p>
 
-  <div class="flex justify-center items-center"><input type="email" placeholder="Email Address" class=" w-8/12 flex p-3 rounded-3xl  rounded-r-none bg-white border border-Desaturated-Red border-solid border-3 placeholder-Desaturated-Red  bg-Gradient-Text-1 lg:w-5/12" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"/>
+  <div class="flex justify-center items-center input"><input type="email" placeholder="Email Address" class=" w-8/12 flex p-3 rounded-3xl  rounded-r-none bg-white border border-Desaturated-Red border-solid border-3 placeholder-Desaturated-Red  bg-Gradient-Text-1 lg:w-5/12" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"/>
   <button class="relative right-4  "  ><img src="./images/icon-arrow.svg" class="py-4 px-7 border-Soft-Red border-solid border-3 rounded-3xl bg-Gradient-Text-2 "  /></button>
 </div>
   </main>
