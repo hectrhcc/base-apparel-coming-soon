@@ -11,7 +11,8 @@ module.exports = {
       },
       backgroundImage: {
         "Gradient-Text-1": "linear-gradient(135deg, hsl(0, 0%, 100%), hsl(0, 100%, 98%))",
-        "Gradient-Text-2": "linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%))"
+        "Gradient-Text-2": "linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%))",
+        "Gradient-Text-3": "linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 60%, 90%))"
       }
     },
   },

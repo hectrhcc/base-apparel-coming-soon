@@ -12,7 +12,19 @@
     .attribution a { color: hsl(228, 45%, 44%); }
     .placeholder-Desaturated-Red::placeholder {
   color: hsl(0, 38%, 85%);
-  font-weight:700;
+  font-weight:500;
+  font-size: small;
+
+}
+.formulario{
+  width:90%;
+  display: inline;
+ 
+}
+#boton{
+ position: relative;
+ bottom:2.77rem;
+ left:15.7rem;
 }
      .espacio{
       letter-spacing: 0.3em;
@@ -56,16 +68,68 @@
       line-height:1.7rem;
       color:hsl(0, 34%, 76%);
     }
-
-    input:invalid::after {
-  content: "Por favor, ingrese un correo electrónico válido.";
-  color: red;
-  font-size: smaller;
-  position: absolute;
-  bottom: -20px; /* Ajusta la posición vertical del mensaje */
-  left: 0;
+    #error-container{
+      position: relative;
+      bottom:3rem;
+      left:10rem;
+      color:rgb(221, 125, 144);
+      font-size: small;
+      font-weight: 500;
     }
 
+    button:hover .mi-input,
+.mi-input:focus {
+  border: 0.15rem solid crimson;
+}
+
+.mi-input:focus {
+  border: 0.15rem solid crimson;
+}
+    input {
+    /* Resetear todos los estilos preestablecidos porque aparecia un naranja en el focus de la nada */
+    appearance: none;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    box-shadow: none;
+    padding-left:1.5rem; 
+    margin: 0;
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+}
+
+/* Estilos específicos para cuando el input está en foco */
+input:focus {
+    /* Agrega estilos de foco según sea necesario */
+    padding-left:1.5rem; 
+}
+@media (min-width:390px){
+    #boton{
+    position: relative;
+    bottom:2.75rem;
+    left:12rem;
+    }
+    #error-container{
+      margin-top: 0.3rem;
+      position: relative;
+      left:4rem;  
+    }
+    .texto{
+      width:95%;
+    }
+}
+   @media (min-width:768px){
+    #boton{
+    position: relative;
+    left:17rem;
+    }
+    #error-container{
+      margin-top: 0.3rem;
+      position: relative;
+      left:12rem;  
+    }
+   }
     @media screen and (min-width: 1024px) and (max-width: 1439px) {
       body, html {
     margin: 0;
@@ -73,7 +137,9 @@
     width: 104.5%;
 
   }
-
+  #error-container{
+    left:9.6rem;
+  }
 
       .container{
         display: flex;
@@ -99,9 +165,10 @@
 
     .texto{
       text-align:left;
-      padding: 0 0.8rem;
-      width:65%;
-      
+      position: relative;
+      right:2.69rem;
+      width:60%;   
+        
     }
         .titulo{
           position: relative;
@@ -140,8 +207,9 @@
     padding: 0;
     width: 104.4%;
   }
-
-
+  #error-container{
+    left:14.8rem;
+  }
       .container{
         display: flex;
         width: 100%;
@@ -166,7 +234,9 @@
       text-align:left;
       padding: 0 1rem;
       position: relative;
-      right:0.4rem;
+      right:1.78rem;
+      width:45%;
+      
     }
     .titulo{
       display: inline-block;
@@ -198,30 +268,28 @@
 <body>
   <div class="container ">
     <div class="elem1 ">
-  <header>
-    
-    <div class="flex mb-8 mt-8 ml-8 sub">  
+      <header>
+          <div class="flex mb-8 mt-8 ml-8 sub">  
     <div class="mt-2 rounded-full h-5 w-5 borde-circulo  relative inline mr-2 lg:mt-0 lg:h-7 lg:w-7 ">
       <div class="relative inset-0 rounded-full border border-transparent">
       </div>
       </div> 
       <span class="w-1/6 text-left font-semibold espacio inline leading-4 text-Dark-Grayish-Red lg:w-1/12">BASE APPAREL</span>
-    </div>
-    
-    <img src="./images/hero-mobile.jpg"  class="lg:hidden sm:mx-auto max-md:w-full"  />
-    
-    
-  </header>
-  <main>
+          </div>
+          <img src="./images/hero-mobile.jpg"  class="lg:hidden sm:mx-auto max-md:w-full"  />
+      </header>
   <div  class="titulo"><div class="wear text-Desaturated-Red">We're</div><div class="comming text-Dark-Grayish-Red"> coming soon</div></div>
-
   <p class="texto block flex  items-center  sm:text-center max-md:text-center sm:w-3/4 lg:w-1/2 ">Hello fellow shoppers! We're currently building our new fashion store. 
   Add your email below to stay up-to-date with announcements and our launch deals.</p>
-
-  <div class="flex justify-center items-center input"><input type="email" placeholder="Email Address" class=" w-8/12 flex p-3 rounded-3xl  rounded-r-none bg-white border border-Desaturated-Red border-solid border-3 placeholder-Desaturated-Red  bg-Gradient-Text-1 lg:w-5/12 sm:w-1/2" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"/>
-  <button type="submit"  class="relative right-8  "  ><img src="./images/icon-arrow.svg" class="py-4 px-10 border-Soft-Red border-solid border-3 rounded-3xl bg-Gradient-Text-2 "  /></button>
-</div>
-  </main>
+  <div  class="flex justify-center items-center input">
+    <form class="formulario relative lg:left-40 sm:left-32 max-md:left-6">
+    <input id='input' type="email" placeholder="Email Address" class=" w-8/12 flex py-2 rounded-3xl  rounded-r-none bg-white border border-gray-300 border-solid border-3 placeholder-Desaturated-Red  bg-Gradient-Text-1 lg:w-5/12 sm:w-1/2  mi-input" required  pattern="[a-z0-9._%+-ñÑ]+@[a-z0-9.-]+\.[a-z]{2,}$"/>
+      <button id='boton' type="submit"   ><img src="./images/icon-arrow.svg" class="max-md:px-7 py-3 px-10 border-Soft-Red border-solid border-3 rounded-3xl bg-Gradient-Text-2 hover:bg-Gradient-Text-3 "  />
+      </button>  
+    </form>
+  </div>     
+  <p id="error-container" ></p> <!--fuera del div porque el flex posiciona el msj al costado-->
+  </main>  
   <footer>
     <p class="attribution">
       Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
@@ -231,5 +299,6 @@
 </div>
 <div class="elem2"><img src="./images/hero-desktop.jpg"  class="sm:hidden max-md:hidden lg:block "  /></div>
 </div>
+<script src="script.js"></script>
 </body>
 </html>
