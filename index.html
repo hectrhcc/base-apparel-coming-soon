@@ -8,8 +8,14 @@
   <link rel="stylesheet" href="./output.css">
   <title>Frontend Mentor | Base Apparel coming soon page</title>
   <style>
-    .attribution { font-size: 11px; text-align: center; margin-top:4rem; }
-    .attribution a { color: hsl(228, 45%, 44%); }
+
+    body{
+      background: 
+      radial-gradient(ellipse at center, hsl(0, 100%, 98%), transparent 60%) 0 0 / 100% 100%,
+    radial-gradient(ellipse at center, hsl(0, 80%, 86%), transparent 60%) 0 calc(1.5 * 4rem) / 100% 100%,
+    radial-gradient(ellipse at center, hsl(0, 60%, 90%), transparent 60%) 0 calc(3 * 8rem) / 100% 100%;
+}
+
     .placeholder-Desaturated-Red::placeholder {
   color: hsl(0, 38%, 85%);
   font-weight:500;
@@ -129,6 +135,9 @@ input:focus {
       position: relative;
       left:12rem;  
     }
+    .texto{
+      width:66%;
+    }
    }
     @media screen and (min-width: 1024px) and (max-width: 1439px) {
       body, html {
@@ -159,8 +168,8 @@ input:focus {
       }
       .attribution{
         position: relative;
-        top:13rem;
-        left:42%;
+        top:4.8rem;
+        right:4.5rem;
       }
 
     .texto{
@@ -226,8 +235,8 @@ input:focus {
       }
       .attribution{
         position: relative;
-        top:13rem;
-        left:42%;
+        top:3rem;
+        right:3.5rem;
       }
 
     .texto{
@@ -291,10 +300,6 @@ input:focus {
   <p id="error-container" ></p> <!--fuera del div porque el flex posiciona el msj al costado-->
   </main>  
   <footer>
-    <p class="attribution">
-      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-      Coded by <a href="https://github.com/hectrhcc" target="_blank">Hector Contreras</a>.
-    </p>
   </footer>
 </div>
 <div class="elem2"><img src="./images/hero-desktop.jpg"  class="sm:hidden max-md:hidden lg:block "  /></div>
