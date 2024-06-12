@@ -22,6 +22,7 @@
   font-size: small;
 
 }
+
 .formulario{
   width:90%;
   display: inline;
@@ -109,6 +110,21 @@
 input:focus {
     /* Agrega estilos de foco según sea necesario */
     padding-left:1.5rem; 
+}
+
+@media (max-width:389px){
+  #boton{
+    position: relative;
+    left:10rem;
+    }
+    #error-container{
+      margin-top: 0.3rem;
+      position: relative;
+      left:3.3rem;  
+    }
+    .input{
+      width: 110%;
+    }
 }
 @media (min-width:390px){
     #boton{
@@ -267,10 +283,6 @@ input:focus {
       left:1.2rem;
     }
     }
-
-   
-   
-
   </style>
 </head>
 <!-- descargar la font e importarla no funko-->
