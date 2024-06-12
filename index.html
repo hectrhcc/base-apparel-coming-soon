@@ -9,16 +9,12 @@
   <title>Frontend Mentor | Base Apparel coming soon page</title>
   <style>
 
-    body{
-       /* Fondo gradiente como respaldo */
-    background-image: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
-    /* Imagen de fondo con transparencia */
-    background-image: url(./images/bg-pattern-desktop.svg), linear-gradient(135deg, hsl(0, 0%, 100%), hsl(0, 100%, 98%));
-    background-repeat:repeat-x;
-    background-position:initial;
-    background-size:54%;
-    overflow-x: hidden;
-}
+body{
+    background: 
+      radial-gradient(ellipse at center, hsl(0, 100%, 98%), transparent 60%) 0 0 / 100% 100%,
+    radial-gradient(ellipse at center, hsl(0, 80%, 86%), transparent 60%) 0 calc(1.5 * 4rem) / 100% 100%,
+    radial-gradient(ellipse at center, hsl(0, 60%, 90%), transparent 60%) 0 calc(3 * 8rem) / 100% 100%;
+  }
 
     .placeholder-Desaturated-Red::placeholder {
   color: hsl(0, 38%, 85%);
@@ -117,6 +113,7 @@ input:focus {
 }
 
 @media (max-width:389px){
+ 
   #boton{
     position: relative;
     left:10.8rem;
@@ -131,6 +128,7 @@ input:focus {
     }
 }
 @media (min-width:390px){
+ 
     #boton{
     position: relative;
     bottom:2.75rem;
@@ -190,6 +188,16 @@ input:focus {
     width: 104.5%;
 
   }
+  body{
+       /* Fondo gradiente como respaldo */
+    background-image: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
+    /* Imagen de fondo con transparencia */
+    background-image: url(./images/bg-pattern-desktop.svg), linear-gradient(135deg, hsl(0, 0%, 100%), hsl(0, 100%, 98%));
+    background-repeat:repeat-x;
+    background-position:initial;
+    background-size:54%;
+    overflow-x: hidden;
+}
   #error-container{
     left:9.6rem;
   }
@@ -260,6 +268,16 @@ input:focus {
     padding: 0;
     width: 104.4%;
   }
+  body{
+       /* Fondo gradiente como respaldo */
+    background-image: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
+    /* Imagen de fondo con transparencia */
+    background-image: url(./images/bg-pattern-desktop.svg), linear-gradient(135deg, hsl(0, 0%, 100%), hsl(0, 100%, 98%));
+    background-repeat:repeat-x;
+    background-position:initial;
+    background-size:54%;
+    overflow-x: hidden;
+}
   #error-container{
     left:14.8rem;
   }
